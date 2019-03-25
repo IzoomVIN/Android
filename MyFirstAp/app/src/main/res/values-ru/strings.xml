@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="true">Мое первое приложение</string>
+    <string name="nameButtonMA" translatable="true">Просмотр</string>
+    <string name="HintMainActivity" translatable="true">Введите пожалуйста текст</string>
+    <string name="nameButtonSA" translatable="true">Отправить</string>
+    <string name="ErrorMessage" translatable="true">Почта не найдена на вашем устройстве</string>
+    <string name="HintViewSA" translatable="true">Вы ничего не написали</string>
+</resources>

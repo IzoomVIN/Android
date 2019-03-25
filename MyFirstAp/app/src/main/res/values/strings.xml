@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My First App</string>
+    <string name="nameButtonMA">view</string>
+    <string name="HintMainActivity">Input Text please</string>
+    <string name="nameButtonSA">Email</string>
+    <string name="ErrorMessage">Can not find Emal apps</string>
+    <string name="HintViewSA">You have not written anything</string>
+    <string name="ButtonToMatr">Matrix</string>
+</resources>
