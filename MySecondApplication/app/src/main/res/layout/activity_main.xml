@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp">
+
+        <ImageView
+            android:id="@+id/photoView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="0dp"
+            android:src="@mipmap/my_photo"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_below="@+id/photoView"
+            app:srcCompat="@android:drawable/btn_star_big_on"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/android_ico"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_below="@+id/star"
+            app:srcCompat="@mipmap/android_ico"
+            tools:srcCompat="@mipmap/android_ico"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/java_ico"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_below="@+id/android_ico"
+            app:srcCompat="@mipmap/java_ico"
+            tools:srcCompat="@mipmap/java_ico"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/first_key_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photoView"
+            android:layout_toEndOf="@id/star"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="4dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/firstKeyInfo" />
+
+        <TextView
+            android:id="@+id/second_key_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_key_info"
+            android:layout_toEndOf="@id/android_ico"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="@dimen/TextMarginSizeTB"
+            android:layout_marginBottom="@dimen/TextMarginSizeTB"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/secondKeyInfo" />
+
+        <TextView
+            android:id="@+id/third_key_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_key_info"
+            android:layout_toEndOf="@id/java_ico"
+            android:layout_marginStart="4dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/thirdKeyInfo" />
+
+        <TextView
+            android:id="@+id/descriptionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/java_ico"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="4dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlack"
+            android:text="@string/description" />
+
+        <EditText
+            android:id="@+id/enterMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descriptionView"
+            android:hint="@string/editTextHint"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="50dp"
+            android:textSize="16sp"
+            tools:ignore="Autofill,TextFields"/>
+
+        <Button
+            android:id="@+id/sendMessageBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_below="@id/enterMessage"
+            android:layout_alignParentEnd="true"
+            android:text="@string/sendMessageButText"/>
+
+        <ImageButton
+            android:id="@+id/vkButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/sendMessageBut"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@+id/gitButton"
+            android:scaleType="center"
+            app:srcCompat="@mipmap/vk_ico_round"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/gitButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/sendMessageBut"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="center"
+            app:srcCompat="@mipmap/git_ico_round"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/textLayaut"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/gitButton"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="50dp" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

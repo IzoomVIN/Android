@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp">
+
+        <ImageView
+            android:id="@+id/photoView"
+            android:layout_width="250dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/my_photo"
+            tools:ignore="ContentDescription"
+            tools:srcCompat="@mipmap/my_photo" />
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_below="@+id/photoView"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/photoView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/btn_star_big_on"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/android_ico"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_below="@+id/star"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/photoView"
+            app:layout_constraintTop_toBottomOf="@+id/star"
+            app:srcCompat="@mipmap/android_ico"
+            tools:ignore="ContentDescription"
+            tools:srcCompat="@mipmap/android_ico" />
+
+        <ImageView
+            android:id="@+id/java_ico"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_below="@+id/android_ico"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/photoView"
+            app:layout_constraintTop_toBottomOf="@+id/android_ico"
+            app:srcCompat="@mipmap/java_ico"
+            tools:ignore="ContentDescription"
+            tools:srcCompat="@mipmap/java_ico" />
+
+        <TextView
+            android:id="@+id/first_key_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/photoView"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@id/star"
+            android:text="@string/firstKeyInfo"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/star"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/second_key_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_key_info"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/android_ico"
+            android:text="@string/secondKeyInfo"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/android_ico"
+            app:layout_constraintTop_toTopOf="@+id/android_ico" />
+
+        <TextView
+            android:id="@+id/third_key_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second_key_info"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/java_ico"
+            android:text="@string/thirdKeyInfo"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/java_ico"
+            app:layout_constraintTop_toTopOf="@+id/java_ico" />
+
+        <TextView
+            android:id="@+id/descriptionView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/java_ico"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/description"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/photoView"
+            app:layout_constraintTop_toBottomOf="@+id/java_ico" />
+
+        <EditText
+            android:id="@+id/enterMessage"
+            android:layout_width="421dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descriptionView"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:hint="@string/editTextHint"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/photoView"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionView"
+            tools:ignore="Autofill,TextFields" />
+
+        <ImageButton
+            android:id="@+id/vkButton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@id/sendMessageBut"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/gitButton"
+            android:scaleType="center"
+            app:layout_constraintStart_toEndOf="@+id/gitButton"
+            app:layout_constraintTop_toBottomOf="@+id/sendMessageBut"
+            app:srcCompat="@mipmap/vk_ico_round"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/gitButton"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_below="@id/sendMessageBut"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="center"
+            app:layout_constraintStart_toEndOf="@+id/photoView"
+            app:layout_constraintTop_toBottomOf="@+id/sendMessageBut"
+            app:srcCompat="@mipmap/git_ico_round"
+            tools:ignore="ContentDescription" />
+
+        <Button
+            android:id="@+id/sendMessageBut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/enterMessage"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/sendMessageButText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterMessage" />
+
+        <LinearLayout
+            android:id="@+id/textLayaut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/photoView"
+            app:layout_constraintTop_toBottomOf="@+id/vkButton" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

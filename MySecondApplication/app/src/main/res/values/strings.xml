@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">My Second Application</string>
+    <string name="thirdKeyInfo">I love java and coffee!</string>
+    <string name="secondKeyInfo">Future developer on android!</string>
+    <string name="firstKeyInfo">Developer… may be…</string>
+    <string name="description">
+        \t\tI forgot that we have classes today.
+        So I created this application - a business card today at the university when
+        I was waiting to start classes!\n
+        \t\tI am actively learning the programming language Java,
+        Java for Android applications. Today I know the Python programming language
+        and some methods for analyzing big data.\n
+        \t\tIn the future, I want to become an Android developer or,
+        more specifically, an Android game developer.</string>
+    <string name="editTextHint">Enter a message...</string>
+    <string name="sendMessageButText">Send message</string>
+    <string name="ErrorMessage">Email applications are not found</string>
+    <string name="my_VK">https://vk.com/izum_zum</string>
+    <string name="mu_git">https://github.com/IzoomVIN</string>
+    <string name="ErrorView">Browser apps aren\'t found on this mobile</string>
+</resources>
