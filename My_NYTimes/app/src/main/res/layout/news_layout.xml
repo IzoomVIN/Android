@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="128dp"
+    android:layout_height="138dp"
     app:contentPadding="1dp"
     app:cardCornerRadius="2dp"
     app:cardElevation="2dp"
@@ -12,6 +12,7 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorWhite"
@@ -19,8 +20,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="124dp"
-            android:layout_height="wrap_content"
+            android:layout_width="134dp"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -31,7 +32,7 @@
             android:id="@+id/category"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/fab_margin"
             android:ellipsize="end"
             android:gravity="center"
             android:maxLines="1"
@@ -47,14 +48,14 @@
             android:id="@+id/title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/fab_margin"
             android:layout_marginTop="2dp"
             android:ellipsize="end"
             android:gravity="center"
             android:maxLines="2"
             android:textColor="@color/colorBlack"
-            android:textStyle="bold"
             android:textSize="12sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/category"
@@ -65,7 +66,7 @@
             android:id="@+id/text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/fab_margin"
             android:layout_marginTop="2dp"
             android:ellipsize="end"
             android:maxLines="3"
@@ -83,12 +84,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/fab_margin"
             android:gravity="start"
-            android:textSize="12sp"
+            android:textSize="10sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
+            tools:ignore="SmallSp"
             tools:text="11 september 2010" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

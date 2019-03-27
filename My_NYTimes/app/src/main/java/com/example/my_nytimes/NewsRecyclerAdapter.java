@@ -1,5 +1,6 @@
 package com.example.my_nytimes;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import java.util.Date;
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -18,30 +20,32 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
     private final List<NewsItem> news;
     private final Context context;
     private final LayoutInflater inflater;
+    private final Activity activity;
 
-    public NewsRecyclerAdapter(Context context, List<NewsItem> news){
+    NewsRecyclerAdapter(Context context, List<NewsItem> news, Activity activity){
         this.news = news;
         this.context = context;
         this.inflater = LayoutInflater.from(context);
+        this.activity = activity;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
         return new ViewHolder(
-                this.inflater.inflate(R.layout.news_layout, parent, false)
-        );
+                this.inflater.inflate(R.layout.news_layout, parent, false),
+                activity);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         NewsItem newsItem = this.news.get(position);
+        Date diffDateToday = new Date();
+        diffDateToday = new Date(diffDateToday.getTime() - newsItem.getPublishDate().getTime());
 
-        holder.category.setText(newsItem.getCategory().getName());
-        holder.title.setText(newsItem.getTitle());
-        holder.text.setText(newsItem.getPreviewText());
-        holder.date.setText(newsItem.getPublishDate().toString());
-        Glide.with(context).load(newsItem.getImageUrl()).into(holder.imageView);
+        holder.bind(newsItem, diffDateToday, context);
+
 
     }
 
@@ -51,19 +55,43 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder{
-        public final ImageView imageView;
-        public final TextView category;
-        public final TextView title;
-        public final TextView text;
-        public final TextView date;
+        final ImageView imageView;
+        final TextView category;
+        final TextView title;
+        final TextView text;
+        final TextView date;
+        private String imageURL;
+        private String fullText;
 
-        public ViewHolder(@NonNull View itemView) {
+        ViewHolder(@NonNull View itemView, final Activity activity) {
             super(itemView);
             this.imageView = itemView.findViewById(R.id.imageView);
             this.category = itemView.findViewById(R.id.category);
             this.title = itemView.findViewById(R.id.title);
             this.text = itemView.findViewById(R.id.text);
             this.date= itemView.findViewById(R.id.date);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    NewsInfoActivity.start(activity, imageURL, category.getText().toString(),
+                            title.getText().toString(), date.getText().toString(),
+                            fullText);
+                }
+            });
         }
+
+        void bind(NewsItem item, Date diffDate, Context context){
+            this.category.setText(item.getCategory().getName());
+            this.title.setText(item.getTitle());
+            this.text.setText(item.getPreviewText());
+            this.date.setText(diffDate.toString());
+            this.fullText = item.getFullText();
+            this.imageURL = item.getImageUrl();
+
+            Glide.with(context).load(imageURL).into(this.imageView);
+        }
+
+
     }
 }
