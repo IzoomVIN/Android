@@ -20,7 +20,14 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerNewsView = findViewById(R.id.RecyclerNewsView);
         recyclerNewsView.setAdapter(new NewsRecyclerAdapter(
-                this, DataUtils.generateNews(), MainActivity.this));
+                this, DataUtils.generateNews(), new ItemClickedCallback() {
+            @Override
+            public void onItemClicked(NewsItem item) {
+                NewsInfoActivity.start(MainActivity.this, item.getImageUrl(), item.getCategory().getName(),
+                        item.getFullText(), item.getPublishDate().toString(),
+                        item.getFullText());
+            }
+        }));
         /*Check screen orientation*/
         if(checkOrientation()) {
             recyclerNewsView.setLayoutManager(new LinearLayoutManager(this));
