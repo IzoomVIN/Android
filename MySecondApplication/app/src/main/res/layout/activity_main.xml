@@ -57,7 +57,7 @@
             android:layout_marginBottom="4dp"
             android:layout_below="@+id/android_ico"
             app:srcCompat="@mipmap/java_ico"
-            tools:srcCompat="@mipmap/java_ico"
+            tools:srcCompaompat="@mipmap/java_ico"
             tools:ignore="ContentDescription" />
 
         <TextView
