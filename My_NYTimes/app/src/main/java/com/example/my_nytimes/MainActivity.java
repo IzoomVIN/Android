@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClicked(NewsItem item) {
                 NewsInfoActivity.start(MainActivity.this, item.getImageUrl(), item.getCategory().getName(),
-                        item.getFullText(), item.getPublishDate().toString(),
+                        item.getTitle(), item.getPublishDate().toString(),
                         item.getFullText());
             }
         }));

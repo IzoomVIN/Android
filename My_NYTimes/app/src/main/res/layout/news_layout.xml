@@ -5,10 +5,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="138dp"
-    app:contentPadding="1dp"
+    android:layout_margin="2dp"
     app:cardCornerRadius="2dp"
-    app:cardElevation="2dp"
-    app:cardBackgroundColor="@color/colorWhiteGreen">
+    app:cardElevation="2dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
