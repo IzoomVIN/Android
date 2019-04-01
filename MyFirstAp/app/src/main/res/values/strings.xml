@@ -6,6 +6,7 @@
     <string name="ErrorMessage">Can not find Emal apps</string>
     <string name="HintViewSA">You have not written anything</string>
     <string name="ButtonToMatr">Matrix</string>
-    <string name="introduction">Hello Ilya, you are disturbed by Vyacheslav Vinogradov.\n</string>
+    <string name="introduction">Hello Ilya.\n</string>
+    <string name="end">\n\nSincerely, Vyacheslav Vinogradov.</string>
     <string name="theme">SRW S15-503</string>
 </resources>

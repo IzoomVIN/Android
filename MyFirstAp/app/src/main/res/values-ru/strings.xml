@@ -6,7 +6,8 @@
     <string name="nameButtonSA" translatable="true">Отправить</string>
     <string name="ErrorMessage" translatable="true">Почта не найдена на вашем устройстве</string>
     <string name="HintViewSA" translatable="true">Вы ничего не написали</string>
-    <string name="introduction">Здравствуйте Илья, вас беспокоит Виноградов Вячеслав.\n</string>
+    <string name="introduction">Здравствуйте Илья.\n</string>
     <string name="ButtonToMatr">Матрица</string>
     <string name="theme">НИР С15-503</string>
+    <string name="end">\n\nС уважением, Виноградов Вячеслав.</string>
 </resources>

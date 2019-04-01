@@ -22,7 +22,9 @@ public class SecondActivity extends Activity{
         TextView textView = findViewById(R.id.textViewSA);
         String introduction = getString(R.string.introduction);
 
-        this.message = introduction.concat(getIntent().getStringExtra("Message"));
+        this.message = introduction
+                .concat(getIntent().getStringExtra("Message"))
+                .concat(getString(R.string.end));
         textView.setText(this.message);
         emailButton.setOnClickListener(new View.OnClickListener(){
             @Override
