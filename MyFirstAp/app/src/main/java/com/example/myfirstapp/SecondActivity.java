@@ -20,8 +20,9 @@ public class SecondActivity extends Activity{
 
         Button emailButton = findViewById(R.id.butGoToMail);
         TextView textView = findViewById(R.id.textViewSA);
+        String introduction = getString(R.string.introduction);
 
-        this.message = getIntent().getStringExtra("Message");
+        this.message = introduction.concat(getIntent().getStringExtra("Message"));
         textView.setText(this.message);
         emailButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -39,15 +40,15 @@ public class SecondActivity extends Activity{
 //        intentMail.setType("*/*");
                 /* This method used for only ACTION_SENDTO*/
                 /* Mailto: recipient's email address*/
-                intentMail.setData(Uri.parse("mailto: Slava147148@gmail.com"));
+                intentMail.setData(Uri.parse("mailto: chaosstruct@gmail.com"));
 
                 /* Sender's email address*/
-                intentMail.putExtra(Intent.EXTRA_EMAIL,
-                        "Slava_148.1998@mail.ru");
+//                intentMail.putExtra(Intent.EXTRA_EMAIL,
+//                        "Slava_148.1998@mail.ru");
 
                 /* Theme of message*/
                 intentMail.putExtra(Intent.EXTRA_SUBJECT,
-                        "Message from my App");
+                        getString(R.string.theme));
 
                 /* Text of message*/
                 intentMail.putExtra(Intent.EXTRA_TEXT,

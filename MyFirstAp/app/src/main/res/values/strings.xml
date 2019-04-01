@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">My First App</string>
+    <string name="app_name">SRW Message</string>
     <string name="nameButtonMA">view</string>
     <string name="HintMainActivity">Input Text please</string>
     <string name="nameButtonSA">Email</string>
     <string name="ErrorMessage">Can not find Emal apps</string>
     <string name="HintViewSA">You have not written anything</string>
     <string name="ButtonToMatr">Matrix</string>
+    <string name="introduction">Hello Ilya, you are disturbed by Vyacheslav Vinogradov.\n</string>
+    <string name="theme">SRW S15-503</string>
 </resources>
