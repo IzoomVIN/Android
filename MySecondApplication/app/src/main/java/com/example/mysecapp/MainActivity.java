@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         textLayaut = findViewById(R.id.textLayaut);
 
         TextView my_text = new TextView(MainActivity.this);
-        my_text.setText("VVE");
+        my_text.setText("© 2018 VVE");
 
         LinearLayout.LayoutParams linearLayoutParams = new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, // width
