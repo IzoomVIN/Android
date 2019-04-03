@@ -40,9 +40,11 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         NewsItem newsItem = this.news.get(position);
-        Date diffDateToday = new Date();
-        diffDateToday = new Date(diffDateToday.getTime() - newsItem.getPublishDate().getTime());
-        holder.bind(newsItem, diffDateToday, context);
+        holder.bind(newsItem,
+                TimeCalc.calculateDifferentToString(
+                        newsItem.getPublishDate()
+                ),
+                context);
     }
 
     @Override
@@ -74,11 +76,11 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
             });
         }
 
-        void bind(NewsItem item, Date diffDate, Context context) {
+        void bind(NewsItem item, String diffDate, Context context) {
             this.category.setText(item.getCategory().getName());
             this.title.setText(item.getTitle());
             this.text.setText(item.getPreviewText());
-            this.date.setText(diffDate.toString());
+            this.date.setText(diffDate);
             this.newsItem = item;
             Glide.with(context).load(item.getImageUrl()).into(this.imageView);
         }
